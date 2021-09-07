@@ -1,0 +1,19 @@
+.card {
+    &__image {
+        position: relative;
+		height: 0;
+		padding-top: 63.33%;
+		margin-bottom: 24px;
+
+        & img {
+            position: absolute;
+		    top: 0;
+		    left: 0;
+	    	right: 0;
+		    bottom: 0;
+		    object-fit: cover;
+		    height: 100%;
+		    width: 100%;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.sidebar {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    min-height: 100vh;
+    padding: 15vh 45px 45px;
+    font-weight: 600;
+    &__logo {
+        display: block;
+        font-size: 22px;
+        line-height: 26px;
+        color: #40A2DD;
+        margin-bottom: 12px;
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+        color: #333;
+        margin-bottom: 14px;
+    }
+}
+
+.search {
+    position: relative;
+    &__input {
+        width: 100%;
+        height: 65px;
+        padding-left: 45px;
+        margin-bottom: 16px;
+        color: #8D9AA3;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(0, 71, 114, 0.1);
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+    &__calendar {
+        background: #fff;
+        padding: 33px 45px 33px 10px;
+        width: 50vh;
+        height: 50vh;
+        position: absolute;
+        top: -50px;
+        left: 355px;
+        border: 2px solid #fff;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        &-footer {
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 30px;
+        }
+        &-months > div {
+            margin-bottom: 24px;
+                div:nth-child(odd) input:checked + label {
+                    background: #40A2DD;
+                    color: #fff;
+                }
+                div:nth-child(even) input:checked + label {
+                    background: #CFEDFF;
+                    color: #000;
+                }
+            div {
+                padding: 0;
+                text-align: center;
+            } 
+        }
+        input {
+            display: none;
+        }
+        label {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+        }
+       
+    }
+    &__submit {
+        background-color: #FAC748;
+        padding-left: 30px;
+        color: #272727;
+        font-size: 18px;
+    }
+    &__link {
+        text-align: center;
+        color: #2B9ADE;
+        text-decoration: underline;
+    }
+    &__dates {
+        text-align: left;
+    }
+    &__results {
+        li {
+           height: 48px;
+        }
+    }
+
+}
+
+.active {
+    color: #0F98EC;
+    border: 1px solid #0F98EC;
+}
+
+.icon-active {
+    background: #0F98EC;
+}

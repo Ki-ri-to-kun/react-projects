@@ -1,0 +1,12 @@
+  .menu__list {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+  }
+  
+ @media(max-width: 767px) {
+	.menu__list {
+			flex-flow: column;
+	}
+ }
+  

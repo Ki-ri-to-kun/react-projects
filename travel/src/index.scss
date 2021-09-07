@@ -1,0 +1,212 @@
+
+$font-family: 'Gilroy';
+$tablet: 1024px;
+$mobile: 767px;
+$link: #3CA5F1;
+
+
+//$min-width: 320px;
+$max-width: 1220px;
+
+$gray: #8E969F; 
+$black: #000;
+
+//*** reset ***//
+// во-первых, стили для body и html
+
+body, html {font-family: $font-family; font-size: 16px; margin: 0; padding: 0;
+@media (max-width: $tablet) {font-size: 15px;}
+@media(max-width: $mobile) {font-size: 14px;}
+} 
+
+nav ul {
+    list-style:none;
+}
+
+// стили для ссылок, заголовков и параграфов
+
+a {text-decoration: none; color: $link;}
+p {margin: 0 0 1rem 0;}
+ 
+ 
+// сброс для инпутов
+input, select, textarea {font-size: 1rem; font-family: $font-family; margin: 0; border: 0; outline: 0; background: #f5f5f5;}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+ //*** reset end ***//
+ 
+ // Подключаем шрифты
+// &display=swap&subset=cyrillic-ext
+//@import url("https://fonts.googleapis.com/css?family=Mukta+Vaani:300,regular,700&display=swap");
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('./assets/fonts/Gilroy-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src:url('./assets/fonts/Gilroy-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('./assets/fonts/Gilroy-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+	
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	color: $black;
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+input {
+	padding: 0;
+}
+
+::placeholder {
+	color: #8D9AA3;
+}
+
+button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.container {
+    max-width: $max-width;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.page {
+	height: 100vh;
+	width: calc(100% - 400px);
+	display: inline-block;
+	vertical-align: top;
+}
+
+//*** grid ***//
+.row {
+	margin: 0 -10px; 
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+.col {
+	padding: 0 10px;
+	&-15 {width: 15%; flex: 0 0 15%;}
+	&-25 {width: 25%; flex: 0 0 25%;}
+	&-33 {width: 33.33%; flex: 0 0 33.33%;}
+	&-39 {width: 39.33%; flex: 0 0 39.33%;}
+	&-50 {width: 50%; flex: 0 0 50%;}
+	&-60 {width: 60%; flex: 0 0 60%;}
+	&-66 {width: 66%; flex: 0 0 66%;}
+	&-75 {width: 75%; flex: 0 0 75%;}
+	@media (max-width: $mobile) {width: 100%; flex: 0 0 100%;
+	&-mobile-25 {width: 25%; flex: 0 0 25%;}
+	&-mobile-33 {width: 33%; flex: 0 0 33%;}
+	&-mobile-50 {width: 50%; flex: 0 0 50%;}
+	&-mobile-66 {width: 66%; flex: 0 0 66%;}
+	&-mobile-75 {width: 75%; flex: 0 0 75%;}
+}
+}
+// *** grid ***//
+
+// *** icons ***//
+
+.icon {
+    background: url('/assets/images/icons.svg') no-repeat;
+	width: 24px;
+	height: 24px;
+    display: inline-block;
+	vertical-align: middle;
+	--bg-position: 30px 30px;
+	background-position: var(--bg-position);
+	&-map-marker {
+		--bg-position: 0 -72px;
+	}
+	&-search {
+		--bg-position: 0 -48px;
+	}
+	&-calendar {
+		--bg-position: 0 -96px;
+	}
+	&-left {
+		--bg-position: -120px 0;
+		transform: rotate(90deg);
+	}
+	&-right {
+		--bg-position: -120px 0;
+		transform: rotate(-90deg);
+	}
+	&-mask {
+		mask: url('/assets/images/icons.svg');
+		mask-position: var(--bg-position);
+		background: $gray;
+	}
+}
+// *** icons end *** //
+.marker-map-icon {
+	position: absolute;
+	pointer-events: none;
+	top: 21px;
+	left: 15px;
+}
+
+.search-icon {
+	position: absolute;
+	pointer-events: none;
+	top: 184px;
+	left: 110px;
+}
+
+.calendar-icon {
+	position: absolute;
+	pointer-events: none;
+	top:100px;
+	left: 15px;
+}
+
+.left-icon {
+	position: relative;
+	top: -3px;
+	background: #000;
+}
+
+
+.right-icon {
+	position: relative;
+	top: -3px;
+	background: #000;
+}
